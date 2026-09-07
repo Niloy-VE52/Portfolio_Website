@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+    background-color: #0b0b0d;
+    color: #e2e8f0;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Instrument Serif', 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', 'Instrument Serif', Georgia, serif;
+  }
+
+  .font-instrument {
+    font-family: 'Instrument Serif', serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Editorial Accent Gradient (Hot Pink to Warm Coral/Orange) */
+.text-pink-orange-gradient, .text-accent-gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #f43f5e 40%, #ff6b35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark Editorial Background Patterns */
+.bg-stripe-pattern {
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.025) 0, rgba(255, 255, 255, 0.025) 1px, transparent 0, transparent 10px);
+}
+
+.bg-grid-subtle {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Custom Glass & Border Utilities */
+.editorial-panel {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.editorial-card {
+  background: #121216;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.editorial-card:hover {
+  border-color: rgba(236, 72, 153, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.15);
+}
+
+.glow-pink-container {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.08) 50%, rgba(249, 115, 22, 0.12) 100%);
+  border: 1px solid rgba(236, 72, 153, 0.35);
+  box-shadow: 0 0 40px -10px rgba(236, 72, 153, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0b0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
