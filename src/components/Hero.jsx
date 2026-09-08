@@ -38,77 +38,8 @@ export default function Hero({ onOpenResume }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* LEFT COLUMN: Hero Portrait, Organic Backdrop Blob, & Floating Cards (Shifted to Left) */}
-          <div className="lg:col-span-5 relative flex justify-center items-center order-2 lg:order-1">
-            
-            {/* Hand-drawn SVG Curved Doodle Arrow (Pointing toward text on right) */}
-            <svg
-              className="absolute -top-10 right-4 w-16 h-16 text-pink-400 opacity-80 z-20 pointer-events-none hidden sm:block transform scale-x-[-1]"
-              viewBox="0 0 100 100"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-            >
-              <path d="M20,20 Q60,10 70,50 T30,80" />
-              <path d="M25,65 L30,80 L45,75" />
-            </svg>
-
-            {/* Hand-drawn Spark Doodles */}
-            <div className="absolute -top-6 left-8 text-orange-400 opacity-90 z-20 pointer-events-none hidden sm:block animate-pulse">
-              <Sparkles className="w-8 h-8" />
-            </div>
-
-            {/* Main Portrait Frame with Backdrop Organic Blob */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative w-full max-w-sm sm:max-w-md mx-auto"
-            >
-              {/* Organic Background Blob */}
-              <div className="absolute inset-0 -m-6 rounded-[40%_60%_70%_30%/50%_60%_40%_50%] bg-gradient-to-tr from-pink-500/35 via-rose-500/25 to-orange-500/40 blur-2xl opacity-80 animate-pulse pointer-events-none" />
-
-              {/* High Quality User Photo Portrait */}
-              <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-2 border-white/10 shadow-2xl bg-[#141417] aspect-[3/4]">
-                <img
-                  src="/avatars/niloy_photo.jpg"
-                  alt="Niloy Das AI Engineer"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-
-              {/* Floating Badge 1 (Bottom Left of Portrait) */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="absolute -bottom-5 -left-4 sm:-left-8 z-30 bg-[#141417]/95 border border-[#27272a] rounded-2xl p-3.5 shadow-2xl flex items-center gap-3 backdrop-blur-md hover:border-pink-500/40 transition-colors"
-              >
-                {/* Avatar Stack */}
-                <div className="flex -space-x-2">
-                  {avatarStack.map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt="Avatar"
-                      className="w-7 h-7 rounded-full border-2 border-[#141417] object-cover"
-                    />
-                  ))}
-                </div>
-                <div className="text-left font-sans">
-                  <div className="text-[11px] font-bold text-white leading-tight">AIML Engineer</div>
-                  <div className="text-[10px] font-mono text-pink-400">@ Virtual Employee</div>
-                </div>
-              </motion.div>
-
-
-            </motion.div>
-
-          </div>
-
-          {/* RIGHT COLUMN: Greeting, Title, Subtitle, & Dual CTAs (Shifted to Right) */}
-          <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
+          {/* LEFT COLUMN: Greeting, Title, Subtitle, & Dual CTAs */}
+          <div className="lg:col-span-7 space-y-6 text-left order-1">
             
             {/* Top Status Pill */}
             <motion.div
@@ -175,6 +106,73 @@ export default function Hero({ onOpenResume }) {
               </button>
             </motion.div>
 
+          </div>
+
+          {/* RIGHT COLUMN: Hero Portrait, Organic Backdrop Blob, & Floating Cards */}
+          <div className="lg:col-span-5 relative flex justify-center items-center order-2">
+            
+            {/* Hand-drawn SVG Curved Doodle Arrow */}
+            <svg
+              className="absolute -top-10 left-4 w-16 h-16 text-pink-400 opacity-80 z-20 pointer-events-none hidden sm:block"
+              viewBox="0 0 100 100"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+            >
+              <path d="M20,20 Q60,10 70,50 T30,80" />
+              <path d="M25,65 L30,80 L45,75" />
+            </svg>
+
+            {/* Hand-drawn Spark Doodles */}
+            <div className="absolute -top-6 right-8 text-orange-400 opacity-90 z-20 pointer-events-none hidden sm:block animate-pulse">
+              <Sparkles className="w-8 h-8" />
+            </div>
+
+            {/* Main Portrait Frame with Backdrop Organic Blob */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative w-full max-w-sm sm:max-w-md mx-auto"
+            >
+              {/* Organic Background Blob */}
+              <div className="absolute inset-0 -m-6 rounded-[40%_60%_70%_30%/50%_60%_40%_50%] bg-gradient-to-tr from-pink-500/35 via-rose-500/25 to-orange-500/40 blur-2xl opacity-80 animate-pulse pointer-events-none" />
+
+              {/* High Quality User Photo Portrait */}
+              <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-2 border-white/10 shadow-2xl bg-[#141417] aspect-[3/4]">
+                <img
+                  src="/avatars/niloy_photo.jpg"
+                  alt="Niloy Das AI Engineer"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              {/* Floating Badge 1 (Bottom Left of Portrait) */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="absolute -bottom-5 -left-4 sm:-left-8 z-30 bg-[#141417]/95 border border-[#27272a] rounded-2xl p-3.5 shadow-2xl flex items-center gap-3 backdrop-blur-md hover:border-pink-500/40 transition-colors"
+              >
+                {/* Avatar Stack */}
+                <div className="flex -space-x-2">
+                  {avatarStack.map((img, i) => (
+                    <img
+                      key={i}
+                      src={img}
+                      alt="Avatar"
+                      className="w-7 h-7 rounded-full border-2 border-[#141417] object-cover"
+                    />
+                  ))}
+                </div>
+                <div className="text-left font-sans">
+                  <div className="text-[11px] font-bold text-white leading-tight">AIML Engineer</div>
+                  <div className="text-[10px] font-mono text-pink-400">@ Virtual Employee</div>
+                </div>
+              </motion.div>
+
+            </motion.div>
 
           </div>
 
